@@ -1,0 +1,44 @@
+.section.feature {
+  display: flex;
+}
+
+.feature-list-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+
+  .icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--seconf-bg-color);
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+
+  .item {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc((100% - 120px) / 4);
+  }
+
+  .title {
+    color: var(--title-text-color);
+    font-size: inherit;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .text {
+    line-height: 1.71;
+  }
+}
