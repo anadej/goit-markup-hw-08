@@ -26,19 +26,38 @@
   .item {
     margin-left: 30px;
     margin-top: 30px;
-    flex-basis: calc((100% - 120px) / 4);
+    flex-basis: calc((100% - 30px) / 1);
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 60px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 120px) / 4);
+    }
   }
 
   .title {
     color: var(--title-text-color);
+    font-style: italic;
     font-size: inherit;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      font-style: normal;
+      text-align: left;
+    }
   }
 
   .text {
+    font-style: italic;
     line-height: 1.71;
+    @media screen and (min-width: 768px) {
+      font-style: normal;
+    }
   }
 }

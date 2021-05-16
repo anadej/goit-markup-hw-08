@@ -1,7 +1,7 @@
 .hero {
   display: flex;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: var(--hero-bg-color);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
@@ -11,6 +11,11 @@
   background-repeat: no-repeat;
   max-width: 1600px;
   margin: 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   .btn {
     background-color: var(--accent-color);
@@ -32,14 +37,24 @@
   }
 
   .title {
-    max-width: 696px;
+    // max-width: 696px;
     margin: 0 auto 30px auto;
     color: var(--primary-white-color);
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: 480px) {
+      width: 360px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }
