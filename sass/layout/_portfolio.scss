@@ -37,8 +37,10 @@
       margin-right: 8px;
     }
 
-    &:first-child {
-      margin-bottom: 15px;
+    @media screen and (max-width: 767px) {
+      &:first-child {
+        margin-bottom: 15px;
+      }
     }
   }
 }
