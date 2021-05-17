@@ -282,14 +282,12 @@ body {
   margin-top: 64px;
 }
 
-.mobile-menu__social .item:not(:first-child) {
-  margin-left: 11px;
+.mobile-menu__social .item:not(:last-child) {
+  margin-right: 11px;
 }
 
-.mobile-menu__social .item:not(:first-child)::before {
-  display: inline-block;
+.mobile-menu__social .item:not(:last-child)::after {
   position: absolute;
-  padding-right: 10px;
   content: '';
   width: 0px;
   height: 22px;
@@ -303,6 +301,7 @@ body {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
+  margin-right: 10px;
 }
 
 .is-open {
