@@ -45,11 +45,7 @@
           <li class="item">
             <a class="link" href="mailto:info@devstudio.com">
               <svg class="mail-icon">
-                <use
-                  href="./images/sprite.svg#mail"
-                  width="16"
-                  height="12"
-                ></use>
+                <use href="./images/sprite.svg#mail"></use>
               </svg>
               info@devstudio.com
             </a>
@@ -63,6 +59,57 @@
             </a>
           </li>
         </ul>
+
+        <button type="button" class="header-mobile-menu-btn" data-menu-button>
+          <svg class="header-mobile-menu-icon">
+            <use href="./images/sprite.svg#burger-icon"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <button class="mobile-menu__close-btn" data-menu-close>
+          <svg class="mobile-menu__close-icon">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu__container">
+          <nav>
+            <ul class="mobile-menu__nav list">
+              <li class="item">
+                <a href="./index.html" class="link">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link current">Портфолио</a>
+              </li>
+              <li class="item">
+                <a href="" class="link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="mobile-menu__contact list">
+            <li class="item">
+              <a href="tel:+380961111111" class="mobile-menu__phone link">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-menu__mail link"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__social list">
+            <li class="item"><a href="" class="link">Instagram</a></li>
+            <li class="item"><a href="" class="link">Twitter</a></li>
+            <li class="item"><a href="" class="link">Facebook</a></li>
+            <li class="item"><a href="" class="link">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -70,8 +117,11 @@
       <section class="section portfolio">
         <div class="container">
           <h1 class="section-title visually-hidden">Список работ</h1>
+
           <ul class="filter-portfolio list">
-            <li class="item"><button class="btn" type="button">Все</button></li>
+            <li class="item">
+              <button class="btn" type="button">Все</button>
+            </li>
             <li class="item">
               <button class="btn" type="button">Веб-сайты</button>
             </li>
@@ -85,15 +135,62 @@
               <button class="btn" type="button">Маркетинг</button>
             </li>
           </ul>
+
           <ul class="portfolio-list list">
             <li class="item">
               <a class="link" href="">
                 <div class="text-cart-box">
-                  <img
-                    src="./images/portfolio/technokrjakweb.jpg"
-                    alt="Экран ноутбука с зугруженным браузером"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/p1.webp    1x,
+                        ./images/portfolio/p1@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p1.jpg    1x,
+                        ./images/portfolio/p1@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet1.webp    1x,
+                        ./images/portfolio/p-tablet1@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet1.jpg    1x,
+                        ./images/portfolio/p-tablet1@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile1.webp    1x,
+                        ./images/portfolio/p-mobile1@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile1.jpg    1x,
+                        ./images/portfolio/p-mobile1@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/p-mobile1.jpg"
+                      alt="Экран ноутбука с зугруженным браузером"
+                    />
+                  </picture>
                   <p class="text-cart-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -109,11 +206,58 @@
             <li class="item">
               <a class="link" href="">
                 <div class="text-cart-box">
-                  <img
-                    src="./images/portfolio/novsgsdesign.jpg"
-                    alt="Два баскетболиста борятся за мяч"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/p2.webp    1x,
+                        ./images/portfolio/p2@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p2.jpg    1x,
+                        ./images/portfolio/p2@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet2.webp    1x,
+                        ./images/portfolio/p-tablet2@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet2.jpg    1x,
+                        ./images/portfolio/p-tablet2@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile2.webp    1x,
+                        ./images/portfolio/p-mobile2@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile2.jpg    1x,
+                        ./images/portfolio/p-mobile2@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/p-mobile2.jpg"
+                      alt="Два баскетболиста борятся за мяч"
+                    />
+                  </picture>
+
                   <p class="text-cart-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -129,11 +273,57 @@
             <li class="item">
               <a class="link" href="">
                 <div class="text-cart-box">
-                  <img
-                    src="./images/portfolio/seafoodapp.jpg"
-                    alt="На фоне рыбы логотип ресторана морской еды"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/p3.webp    1x,
+                        ./images/portfolio/p3@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p3.jpg    1x,
+                        ./images/portfolio/p3@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet3.webp    1x,
+                        ./images/portfolio/p-tablet3@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet3.jpg    1x,
+                        ./images/portfolio/p-tablet3@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile3.webp    1x,
+                        ./images/portfolio/p-mobile3@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile3.jpg    1x,
+                        ./images/portfolio/p-mobile3@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/p-mobile3.jpg"
+                      alt="На фоне рыбы логотип ресторана морской еды"
+                    />
+                  </picture>
                   <p class="text-cart-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -149,11 +339,57 @@
             <li class="item">
               <a class="link" href="">
                 <div class="text-cart-box">
-                  <img
-                    src="./images/portfolio/primemarketing.jpg"
-                    alt="Черные беспроводные накладные наушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/p4.webp    1x,
+                        ./images/portfolio/p4@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p4.jpg    1x,
+                        ./images/portfolio/p4@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet4.webp    1x,
+                        ./images/portfolio/p-tablet4@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet4.jpg    1x,
+                        ./images/portfolio/p-tablet4@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile4.webp    1x,
+                        ./images/portfolio/p-mobile4@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile4.jpg    1x,
+                        ./images/portfolio/p-mobile4@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/p-mobile4.jpg"
+                      alt="Черные беспроводные накладные наушники"
+                    />
+                  </picture>
                   <p class="text-cart-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -169,11 +405,58 @@
             <li class="item">
               <a class="link" href="">
                 <div class="text-cart-box">
-                  <img
-                    src="./images/portfolio/boxesapp.jpg"
-                    alt="Две небольшие коробки белого и коричневого цвета"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/p5.webp    1x,
+                        ./images/portfolio/p5@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p5.jpg    1x,
+                        ./images/portfolio/p5@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet5.webp    1x,
+                        ./images/portfolio/p-tablet5@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet5.jpg    1x,
+                        ./images/portfolio/p-tablet5@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile5.webp    1x,
+                        ./images/portfolio/p-mobile5@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile5.jpg    1x,
+                        ./images/portfolio/p-mobile5@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/p-mobile5.jpg"
+                      alt="Две небольшие коробки белого и коричневого цвета"
+                    />
+                  </picture>
+
                   <p class="text-cart-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -189,11 +472,58 @@
             <li class="item">
               <a class="link" href="">
                 <div class="text-cart-box">
-                  <img
-                    src="./images/portfolio/inspirationhasnobordersweb.jpg"
-                    alt="Экран iMAC с загруженным браузером"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/p6.webp    1x,
+                        ./images/portfolio/p6@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p6.jpg    1x,
+                        ./images/portfolio/p6@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet6.webp    1x,
+                        ./images/portfolio/p-tablet6@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet6.jpg    1x,
+                        ./images/portfolio/p-tablet6@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile6.webp    1x,
+                        ./images/portfolio/p-mobile6@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile6.jpg    1x,
+                        ./images/portfolio/p-mobile6@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/p-mobile6.jpg"
+                      alt="Экран iMAC с загруженным браузером"
+                    />
+                  </picture>
+
                   <p class="text-cart-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -209,11 +539,57 @@
             <li class="item">
               <a class="link" href="">
                 <div class="text-cart-box">
-                  <img
-                    src="./images/portfolio/limitededitiondesign.jpg"
-                    alt="Развернутая страница журнала"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/p7.webp    1x,
+                        ./images/portfolio/p7@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p7.jpg    1x,
+                        ./images/portfolio/p7@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet7.webp    1x,
+                        ./images/portfolio/p-tablet7@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet7.jpg    1x,
+                        ./images/portfolio/p-tablet7@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile7.webp    1x,
+                        ./images/portfolio/p-mobile7@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile7.jpg    1x,
+                        ./images/portfolio/p-mobile7@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/p-mobile7.jpg"
+                      alt="Развернутая страница журнала"
+                    />
+                  </picture>
                   <p class="text-cart-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -229,11 +605,58 @@
             <li class="item">
               <a class="link" href="">
                 <div class="text-cart-box">
-                  <img
-                    src="./images/portfolio/labmarketing.jpg"
-                    alt="Бирка с логотипом проекта"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/p8.webp    1x,
+                        ./images/portfolio/p8@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p8.jpg    1x,
+                        ./images/portfolio/p8@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet8.webp    1x,
+                        ./images/portfolio/p-tablet8@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet8.jpg    1x,
+                        ./images/portfolio/p-tablet8@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile8.webp    1x,
+                        ./images/portfolio/p-mobile8@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile8.jpg    1x,
+                        ./images/portfolio/p-mobile8@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/p-mobile8.jpg"
+                      alt="Бирка с логотипом проекта"
+                    />
+                  </picture>
+
                   <p class="text-cart-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -249,11 +672,57 @@
             <li class="item">
               <a class="link" href="">
                 <div class="text-cart-box">
-                  <img
-                    src="./images/portfolio/growingbusinessapp.jpg"
-                    alt="Документы, очки, ноутбук с загруженным сайтом компании, руки человека на клавиатуре"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/p9.webp    1x,
+                        ./images/portfolio/p9@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p9.jpg    1x,
+                        ./images/portfolio/p9@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet9.webp    1x,
+                        ./images/portfolio/p-tablet9@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-tablet9.jpg    1x,
+                        ./images/portfolio/p-tablet9@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile9.webp    1x,
+                        ./images/portfolio/p-mobile9@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/p-mobile9.jpg    1x,
+                        ./images/portfolio/p-mobile9@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/p-mobile9.jpg"
+                      alt="Документы, очки, ноутбук с загруженным сайтом компании, руки человека на клавиатуре"
+                    />
+                  </picture>
                   <p class="text-cart-overlay">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -347,5 +816,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>

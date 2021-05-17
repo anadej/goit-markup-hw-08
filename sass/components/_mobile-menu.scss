@@ -1,0 +1,126 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  max-width: 480px;
+  height: 100vh;
+  transform: translateX(-50%);
+  padding: 48px 40px;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  &__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__close-icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__phone {
+    color: #2196f3;
+    font-weight: 500;
+    font-size: 34px;
+    font-style: italic;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+
+  &__mail {
+    color: #757575;
+    font-weight: 500;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.03;
+    letter-spacing: 0.02em;
+  }
+
+  &__nav {
+    margin-bottom: 40px; //что бы при уменьшении высоты моб.меню телефон в плотную не был с меню
+    & .item {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
+    & .link {
+      color: #212121;
+      font-weight: 500;
+      font-style: italic;
+      font-size: 40px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+
+      &:hover,
+      &:focus,
+      &.current {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  &__contact {
+    & .item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    margin-top: 64px;
+
+    & .item:not(:first-child) {
+      margin-left: 11px;
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        margin-right: 10px;
+
+        content: '';
+        width: 0px;
+        height: 22px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        // transform: rotate(90deg);
+      }
+    }
+
+    & .link {
+      color: #2196f3;
+      font-weight: 500;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}

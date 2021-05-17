@@ -4,6 +4,13 @@
   padding-right: 15px;
   margin: 0 auto;
 
+  .site-header & {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
   .site-footer & {
     display: flex;
     justify-content: space-between;
@@ -19,7 +26,7 @@
 
     @media screen and (min-width: 1200px) {
       flex-wrap: nowrap;
-\    }
+    }
 
     .title {
       color: var(--primary-white-color);
