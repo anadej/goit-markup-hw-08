@@ -11,6 +11,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 9999;
 
   &__close-btn {
     position: absolute;
